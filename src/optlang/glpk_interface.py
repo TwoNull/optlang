@@ -404,7 +404,7 @@ class Configuration(interface.MathematicalProgrammingConfiguration):
         for key, val in six.iteritems(state):
             if key != "tolerances":
                 setattr(self, key, val)
-        for key, val in six.iteritems(state["tolerances"]):
+        for key, val in six.iteritems(state.get("tolerances", {})):
             if key in self._tolerance_functions():
                 setattr(self.tolerances, key, val)
 

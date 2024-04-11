@@ -47,3 +47,6 @@ nosetests.xml
 .idea
 
 MANIFEST
+
+# Wakatime
+.wakatime-project
